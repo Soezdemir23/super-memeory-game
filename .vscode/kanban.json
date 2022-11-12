@@ -9,26 +9,22 @@
         },
         {
             "title": "To-Do",
-            "tasks": [],
+            "tasks": [
+                {
+                    "text": "create a card component to display the cards\n",
+                    "id": "clab86faf000b41631qmnchjh"
+                },
+                {
+                    "text": "add a check that tells me if the array is filled.",
+                    "id": "clab8762h000c4163ky5qy304"
+                }
+            ],
             "id": "claayccn3000c4163fk99e6qh",
             "color": "#fcb900"
         },
         {
             "title": "Doing",
-            "tasks": [
-                {
-                    "text": "create a function that creates an array of background url pictures\n",
-                    "id": "clab85j8p000a41637de40qgc"
-                },
-                {
-                    "text": "add a check that tells me if the array is filled.",
-                    "id": "clab8762h000c4163ky5qy304"
-                },
-                {
-                    "text": "create a card component to display the cards\n",
-                    "id": "clab86faf000b41631qmnchjh"
-                }
-            ],
+            "tasks": [],
             "id": "claayccn3000d4163y1jbrw5n",
             "color": "#0693e3"
         },
@@ -50,6 +46,10 @@
                 {
                     "text": "Style the site in green\n",
                     "id": "clab27664000l4163l9e66gjq"
+                },
+                {
+                    "text": "create a function that creates an array of background url pictures\n",
+                    "id": "clab85j8p000a41637de40qgc"
                 }
             ],
             "id": "claayccn3000e4163wxmcw6l4",
@@ -58,5 +58,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1668152397724
+    "timestamp": 1668186794301
 }
