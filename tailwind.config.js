@@ -5,7 +5,18 @@ module.exports = {
 
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-horizontal': 'spin 3s linear infinite'
+
+      },
+      keyframes: {
+        spin: {
+          '0%': {transform: 'rotateY(0deg)'},
+          '100%': {transform: 'rotateY(360deg)'}
+        }
+      }
+    },
   },
   plugins: [],
 }
