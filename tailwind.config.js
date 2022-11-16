@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'spin-horizontal': 'spin 3s linear infinite'
+        'spin-horizontal': 'spin 1s linear infinite'
 
       },
       keyframes: {
