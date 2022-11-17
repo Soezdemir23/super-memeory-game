@@ -3,7 +3,16 @@
     "cols": [
         {
             "title": "Bugs",
-            "tasks": [],
+            "tasks": [
+                {
+                    "text": "When the pointer is hovering over the card, make it transform in the direction of the pointer",
+                    "id": "clafldsup000a3r639znikkrq"
+                },
+                {
+                    "text": "if the user clicks on the card, make it spin\nUse this as inspiration\nhttps://codepen.io/yochans/pen/EMJNJL",
+                    "id": "clafleycz000c3r6366ij6vlt"
+                }
+            ],
             "id": "claayccn3000a4163kktofpdh",
             "color": "#eb144c"
         },
@@ -11,12 +20,16 @@
             "title": "To-Do",
             "tasks": [
                 {
-                    "text": "create a card component to display the cards\n",
-                    "id": "clab86faf000b41631qmnchjh"
+                    "text": "implement a shuffle of the array by using this url:\nhttps://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj",
+                    "id": "clajuzbc0000a3r63k9m6wful"
                 },
                 {
-                    "text": "add a check that tells me if the array is filled.",
-                    "id": "clab8762h000c4163ky5qy304"
+                    "text": "create a feature where you can",
+                    "id": "clajsltx5000a3r63ll9j2q71"
+                },
+                {
+                    "text": "Create a loading screen that plays until all images are loaded",
+                    "id": "claflhnzv000d3r63wgo9jf3g"
                 }
             ],
             "id": "claayccn3000c4163fk99e6qh",
@@ -24,13 +37,26 @@
         },
         {
             "title": "Doing",
-            "tasks": [],
+            "tasks": [
+                {
+                    "text": "When the user clicks the wrong picture, replace the picture with a game over screen",
+                    "id": "claflvqav000e3r632embxcti"
+                },
+                {
+                    "text": "add a check that tells me if the array is filled.",
+                    "id": "clab8762h000c4163ky5qy304"
+                }
+            ],
             "id": "claayccn3000d4163y1jbrw5n",
             "color": "#0693e3"
         },
         {
             "title": "Done",
             "tasks": [
+                {
+                    "text": "rework the state and the array needed to view the pictures to accomodate for:\n1. id, maybe the name of the key as string\n2. pressed, simple boolean for spinning and checking if the player has used it.\n3. url for picture, picURL",
+                    "id": "clagsgvg5000a3r63asj9bkc4"
+                },
                 {
                     "text": "Create a Header component",
                     "id": "claayccn3000b4163um3uhrge"
@@ -50,6 +76,14 @@
                 {
                     "text": "create a function that creates an array of background url pictures\n",
                     "id": "clab85j8p000a41637de40qgc"
+                },
+                {
+                    "text": "create a card component to display the cards\n",
+                    "id": "clab86faf000b41631qmnchjh"
+                },
+                {
+                    "text": "When the pointer is hovering over the card, make it enlarge",
+                    "id": "claflefon000b3r63d5bc52gl"
                 }
             ],
             "id": "claayccn3000e4163wxmcw6l4",
@@ -58,5 +92,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1668186794301
+    "timestamp": 1668616182972
 }

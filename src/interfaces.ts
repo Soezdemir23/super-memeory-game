@@ -11,6 +11,7 @@ export interface pepeObject {
 //Main.tsx
 export interface cardProps {
     urls: null | pepeObject[] | undefined;
-    onClick: React.MouseEventHandler<HTMLDivElement> ;
+    //onClick: React.MouseEventHandler<HTMLDivElement> ;
+    onClick: React.MouseEventHandler<HTMLDivElement>;
   }
   

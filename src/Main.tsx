@@ -1,6 +1,9 @@
 import { cardProps } from "./interfaces";
 
-export default function Main({ urls, onClick }: cardProps) {
+export default function Main({
+   urls,
+  onClick 
+  }: cardProps) {
   let count = 0;
   // need to think of something when I can display a "Loading screen component" until all images are loaded
   const allLoaded = () => {
@@ -28,7 +31,8 @@ export default function Main({ urls, onClick }: cardProps) {
           className="hover:scale-110 w-32 sm:w-40 xl:w-52"
           onClick={onClick}
         >
-          <div className={url.pressed === true ? "animate-spin-horizontal" : ""}>
+          <div //className={url.pressed === true ? "animate-spin-horizontal" : ""}
+          >
             <img
               className="rounded-xl"
               onLoad={allLoaded}
