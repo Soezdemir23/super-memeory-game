@@ -8,8 +8,9 @@ import { flushSync } from "react-dom";
 import { pepeObject } from "./interfaces";
 function App() {
   const countRef = useRef(4);
-  const newGameRef = useRef(true);
-  const winRoundRef = useRef(true);
+  const [gameOver, setGameOver] = useState(false);
+  const chosenFeeds = useRef<string[]>([]);
+  const [winRound, setWinRound] = useState(false);
   const [usedFeeds, setUsedFeeds] = useState<null | undefined | pepeObject[]>(
     null
   );
@@ -38,33 +39,46 @@ function App() {
     return pepeList;
   }
 
-
   // A kind user told me, that i am setting state on every render if I don't use it in this manner
   // this is an initial render
   useEffect(() => {
-    
-    if(newGameRef.current === true) {
-      setUsedFeeds(pickPepeURLs(countRef.current));
-      newGameRef.current = !newGameRef.current;
-    } else if (usedFeeds?.filter(pepeObject => pepeObject.pressed === true).length === countRef.current) {
-      // this causes an infinite loop
-      countRef.current = countRef.current + 3;
-      setUsedFeeds(pickPepeURLs(countRef.current))
-      countRef.current = 0;
-      
-    }
-    
-  }, [usedFeeds]);
+    setUsedFeeds(pickPepeURLs(countRef.current));
+  }, []);
 
+  // TODO: need to check if chosenFeeds is already populated with the object id
   function onClickCheck(e: React.MouseEvent<HTMLDivElement>) {
-    setUsedFeeds(usedFeeds?.map((objecto) => {
-      if (objecto.id === e.currentTarget.dataset.key) {
-        objecto.pressed = true;
-        return objecto
-      }return objecto
-    }))
+    setUsedFeeds(
+      usedFeeds?.map((objecto) => {
+        if (objecto.id === e.currentTarget.dataset.key) {
+          // if the same card has been chosen then disply the gameoverscreen
+          if (chosenFeeds.current.includes(objecto.id) === true) {
+            flushSync(() => {
+              setGameOver(true);
+            });
+          }
+          chosenFeeds.current.push(objecto.id);
+          objecto.pressed = true;
+          return objecto;
+        }
+        return objecto;
+      })
+    );
+    //also check here if the number of true clicks are equal to the countRef.current
+    if (
+      usedFeeds?.filter((pepes) => pepes.pressed === true).length ===
+      countRef.current
+    ) {
+      setWinRound(true);
+    }
   }
 
+  // I tested this outside while my fingers got cold. No need for useEffect!
+  if (winRound === true) {
+    console.log("you win"); // change something here to facilitate a 5 second loading screen until I find out how to intercept the images.
+    setWinRound(false);
+    countRef.current = countRef.current + 3;
+    setUsedFeeds(pickPepeURLs(countRef.current));
+  }
 
   /*function spinConfirmClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     console.log(e.currentTarget.dataset.key);
@@ -77,14 +91,24 @@ function App() {
     });
     setUsedFeeds(changedPepes);
   }*/
+
+  if (gameOver === true) {
+    return (
+      <div className="flex bg-green-600 min-h-screen">
+        <h1 className="justify-center grow flex self-center text-9xl">
+          <span className="animate-spin-horizontal">GA</span>
+          <span className="animate-ping">ME</span>
+          <span className="animate-bounce">OV</span>
+          <span className="animate-spin">ER</span>
+        </h1>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-green-600 ">
       <Header />
-      <Main 
-      urls={usedFeeds} 
-      onClick={onClickCheck} 
-      
-      />
+      <Main urls={usedFeeds} onClick={onClickCheck} />
 
       <Footer />
     </div>
