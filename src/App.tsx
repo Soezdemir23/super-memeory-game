@@ -7,9 +7,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { flushSync } from "react-dom";
 import { pepeObject } from "./interfaces";
 function App() {
-  const countRef = useRef(4);
+  const countRef = useRef(5);
   const [gameOver, setGameOver] = useState(false);
   const chosenFeeds = useRef<string[]>([]);
+  const highScoreRef = useRef(0);
   const [winRound, setWinRound] = useState(false);
   const [usedFeeds, setUsedFeeds] = useState<null | undefined | pepeObject[]>(
     null
@@ -80,34 +81,35 @@ function App() {
     setUsedFeeds(pickPepeURLs(countRef.current));
   }
 
-  /*function spinConfirmClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-    console.log(e.currentTarget.dataset.key);
-    const changedPepes = usedFeeds?.map((pepe) => {
-      if (pepe.id === e.currentTarget.dataset.key) {
-        pepe.pressed = !pepe.pressed;
-        return pepe;
-      }
-      return pepe;
-    });
-    setUsedFeeds(changedPepes);
-  }*/
-
+  function newGame () {
+    countRef.current = 5;
+    setGameOver(false);
+    chosenFeeds.current = [];
+    setWinRound(false);
+    setUsedFeeds(pickPepeURLs(countRef.current))
+  }
   if (gameOver === true) {
     return (
-      <div className="flex bg-green-600 min-h-screen">
-        <h1 className="justify-center grow flex self-center text-9xl">
-          <span className="animate-spin-horizontal">GA</span>
-          <span className="animate-ping">ME</span>
-          <span className="animate-bounce">OV</span>
-          <span className="animate-spin">ER</span>
-        </h1>
+      <div className="bg-green-600 min-h-screen flex flex-col justify-center">
+        <div className="flex justify-self-center flex-col self-center">
+          <h1 className="text-9xl flex justify-self-center self-center">
+            <span className="animate-spin-horizontal">GA</span>
+            <span className="animate-ping">ME</span>
+            <span className="animate-bounce">OV</span>
+            <span className="animate-spin">ER</span>
+          </h1>
+          <button onClick={newGame} className="mt-24 hover:bg-orange-400">New Game?</button>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="flex flex-col min-h-screen bg-green-600 ">
-      <Header />
+      <Header 
+      score={chosenFeeds.current.length}
+      highscore = {highScoreRef}
+      />
       <Main urls={usedFeeds} onClick={onClickCheck} />
 
       <Footer />
