@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Soezdemir23/super-memeory-game/static/css/main.12efe818.css",
+    "main.js": "/Soezdemir23/super-memeory-game/static/js/main.2c0cd2e3.js",
+    "static/js/787.039ba90d.chunk.js": "/Soezdemir23/super-memeory-game/static/js/787.039ba90d.chunk.js",
+    "index.html": "/Soezdemir23/super-memeory-game/index.html",
+    "main.12efe818.css.map": "/Soezdemir23/super-memeory-game/static/css/main.12efe818.css.map",
+    "main.2c0cd2e3.js.map": "/Soezdemir23/super-memeory-game/static/js/main.2c0cd2e3.js.map",
+    "787.039ba90d.chunk.js.map": "/Soezdemir23/super-memeory-game/static/js/787.039ba90d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12efe818.css",
+    "static/js/main.2c0cd2e3.js"
+  ]
+}
