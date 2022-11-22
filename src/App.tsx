@@ -48,6 +48,7 @@ function App() {
 
   // TODO: need to check if chosenFeeds is already populated with the object id
   function onClickCheck(e: React.MouseEvent<HTMLDivElement>) {
+
     setUsedFeeds(
       usedFeeds?.map((objecto) => {
         if (objecto.id === e.currentTarget.dataset.key) {
@@ -71,6 +72,18 @@ function App() {
     ) {
       setWinRound(true);
     }
+
+/*    flushSync(() => {
+      let arr = usedFeeds;
+      if (arr === undefined || arr === null) return;
+      for (let i = arr.length -1; i > 0; i --) {
+        const j = Math.floor(Math.random() * (i + 1))
+        const temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+      setUsedFeeds(arr)
+    })*/
   }
 
   // I tested this outside while my fingers got cold. No need for useEffect!
