@@ -4,12 +4,11 @@ import Main from "./Main";
 import Footer from "./Footer";
 import feed from "./feed.json";
 import React, { useState, useEffect, useRef } from "react";
-import { flushSync } from "react-dom";
 import { pepeObject } from "./interfaces";
 function App() {
   const countRef = useRef(5);
   const [gameOver, setGameOver] = useState(false);
-  const chosenFeeds = useRef<string[]>([]);
+  const chosenFeedsRef = useRef<string[]>([]);
   const highScoreRef = useRef(0);
   const [winRound, setWinRound] = useState(false);
   const [usedFeeds, setUsedFeeds] = useState<null | undefined | pepeObject[]>(
@@ -53,13 +52,13 @@ function App() {
       usedFeeds?.map((objecto) => {
         if (objecto.id === e.currentTarget.dataset.key) {
           // if the same card has been chosen then disply the gameoverscreen
-          if (chosenFeeds.current.includes(objecto.id) === true) {
-            flushSync(() => {
-              setGameOver(true);
-            });
+          if (chosenFeedsRef.current.includes(objecto.id) === true) {
+            setGameOver(true);
+            
+          } else {
+            chosenFeedsRef.current.push(objecto.id);
+            objecto.pressed = true;
           }
-          chosenFeeds.current.push(objecto.id);
-          objecto.pressed = true;
           return objecto;
         }
         return objecto;
@@ -72,18 +71,20 @@ function App() {
     ) {
       setWinRound(true);
     }
-
-/*    flushSync(() => {
-      let arr = usedFeeds;
-      if (arr === undefined || arr === null) return;
-      for (let i = arr.length -1; i > 0; i --) {
-        const j = Math.floor(Math.random() * (i + 1))
-        const temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-      }
-      setUsedFeeds(arr)
-    })*/
+    // this causes the count refs to stop working after setting it up. why?
+    // the header component doesn't update, how come?
+   /* flushSync(() => {
+    let arr = usedFeeds;
+    if (arr === undefined || arr === null) return;
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+    setUsedFeeds(arr)
+  })*/
+    
   }
 
   // I tested this outside while my fingers got cold. No need for useEffect!
@@ -94,12 +95,12 @@ function App() {
     setUsedFeeds(pickPepeURLs(countRef.current));
   }
 
-  function newGame () {
+  function newGame() {
     countRef.current = 5;
     setGameOver(false);
-    chosenFeeds.current = [];
+    chosenFeedsRef.current = [];
     setWinRound(false);
-    setUsedFeeds(pickPepeURLs(countRef.current))
+    setUsedFeeds(pickPepeURLs(countRef.current));
   }
   if (gameOver === true) {
     return (
@@ -111,18 +112,19 @@ function App() {
             <span className="animate-bounce">OV</span>
             <span className="animate-spin">ER</span>
           </h1>
-          <button onClick={newGame} className="mt-24 hover:bg-orange-400">New Game?</button>
+          <button onClick={newGame} className="mt-24 hover:bg-orange-400">
+            New Game?
+          </button>
         </div>
       </div>
     );
   }
 
   return (
+    
     <div className="flex flex-col min-h-screen bg-green-600 ">
-      <Header 
-      score={chosenFeeds.current.length}
-      highscore = {highScoreRef}
-      />
+      
+      <Header score={chosenFeedsRef} highscore={highScoreRef} />
       <Main urls={usedFeeds} onClick={onClickCheck} />
 
       <Footer />
