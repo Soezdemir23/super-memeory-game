@@ -1,18 +1,22 @@
+import { useRef } from "react";
 import { cardProps } from "./interfaces";
 
 export default function Main({
    urls,
   onClick 
   }: cardProps) {
-  let count = 0;
+  let countRef = useRef(0)
+  let loaded = false;
   // need to think of something when I can display a "Loading screen component" until all images are loaded
   const allLoaded = () => {
-    count++;
-    if (count === urls?.length) {
-      count = 0;
-      return true;
+    countRef.current = countRef.current +1;
+    console.log("hi")
+    if (countRef.current === urls?.length) {
+      console.log("bing bing")
+      countRef.current = 0;
+      loaded = true
     }
-    return false;
+    loaded = false;
   };
 
   
@@ -23,7 +27,7 @@ export default function Main({
    * Then ... I don't know anymore
    */
   return (
-    <main className="grid gap-x-1 gap-y-5 pt-8 hover: justify-items-center grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7">
+    <main className="grid grow gap-x-1 gap-y-5 pt-8 hover: justify-items-center items-center grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5">
       {urls?.map((url) => (
         <div
           key={url.id}
