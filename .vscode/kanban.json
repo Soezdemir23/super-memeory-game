@@ -20,10 +20,6 @@
             "title": "To-Do",
             "tasks": [
                 {
-                    "text": "create a feature where you can",
-                    "id": "clajsltx5000a3r63ll9j2q71"
-                },
-                {
                     "text": "Create a loading screen that plays until all images are loaded",
                     "id": "claflhnzv000d3r63wgo9jf3g"
                 }
@@ -33,18 +29,17 @@
         },
         {
             "title": "Doing",
-            "tasks": [
-                {
-                    "text": "implement a shuffle of the array by using this url:\nhttps://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj",
-                    "id": "clajuzbc0000a3r63k9m6wful"
-                }
-            ],
+            "tasks": [],
             "id": "claayccn3000d4163y1jbrw5n",
             "color": "#0693e3"
         },
         {
             "title": "Done",
             "tasks": [
+                {
+                    "text": "implement a shuffle of the array by using this url:\nhttps://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj",
+                    "id": "clajuzbc0000a3r63k9m6wful"
+                },
                 {
                     "text": "support highscore and score",
                     "id": "clar1fux6000a3r631y5tv8u3"
@@ -102,5 +97,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1669122091765
+    "timestamp": 1669137839528
 }
