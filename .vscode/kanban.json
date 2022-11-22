@@ -2,7 +2,7 @@
     "title": "Kanban",
     "cols": [
         {
-            "title": "Bugs",
+            "title": "Out of Scope",
             "tasks": [
                 {
                     "text": "When the pointer is hovering over the card, make it transform in the direction of the pointer",
@@ -20,10 +20,6 @@
             "title": "To-Do",
             "tasks": [
                 {
-                    "text": "implement a shuffle of the array by using this url:\nhttps://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj",
-                    "id": "clajuzbc0000a3r63k9m6wful"
-                },
-                {
                     "text": "create a feature where you can",
                     "id": "clajsltx5000a3r63ll9j2q71"
                 },
@@ -39,12 +35,8 @@
             "title": "Doing",
             "tasks": [
                 {
-                    "text": "When the user clicks the wrong picture, replace the picture with a game over screen",
-                    "id": "claflvqav000e3r632embxcti"
-                },
-                {
-                    "text": "add a check that tells me if the array is filled.",
-                    "id": "clab8762h000c4163ky5qy304"
+                    "text": "implement a shuffle of the array by using this url:\nhttps://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj",
+                    "id": "clajuzbc0000a3r63k9m6wful"
                 }
             ],
             "id": "claayccn3000d4163y1jbrw5n",
@@ -53,6 +45,18 @@
         {
             "title": "Done",
             "tasks": [
+                {
+                    "text": "support highscore and score",
+                    "id": "clar1fux6000a3r631y5tv8u3"
+                },
+                {
+                    "text": "add a check that tells me if the array is filled.",
+                    "id": "clab8762h000c4163ky5qy304"
+                },
+                {
+                    "text": "When the user clicks the wrong picture, replace the picture with a game over screen",
+                    "id": "claflvqav000e3r632embxcti"
+                },
                 {
                     "text": "rework the state and the array needed to view the pictures to accomodate for:\n1. id, maybe the name of the key as string\n2. pressed, simple boolean for spinning and checking if the player has used it.\n3. url for picture, picURL",
                     "id": "clagsgvg5000a3r63asj9bkc4"
@@ -88,9 +92,15 @@
             ],
             "id": "claayccn3000e4163wxmcw6l4",
             "color": "#00d084"
+        },
+        {
+            "title": "Column 5",
+            "tasks": [],
+            "id": "claqxn7oo000a3r635fsj04qc",
+            "color": "#f78da7"
         }
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1668616182972
+    "timestamp": 1669121819493
 }
