@@ -3,8 +3,8 @@
 ## If you want to play it on your computer:
 
 + clone it
-+ npm ci, to install required packages conservatively. Alternatively smash that `npm install` on your terminal and hit enter
-+ npm run and enter
++ `npm ci `, to install required packages conservatively. Alternatively smash that `npm install` on your terminal and hit enter
++ `npm run start`
 
 ## If you want to play it on the browser:
 scroll down :)
