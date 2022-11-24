@@ -1,5 +1,14 @@
 # Super Memory Game: Pepe Edition
 
+## If you want to play it on your computer:
+
++ clone it
++ npm ci, to install required packages conservatively. Alternatively smash that `npm install` on your terminal and hit enter
++ npm run and enter
+
+## If you want to play it on the browser:
+scroll down :)
+
 ## What is a memorygame?
 
 It's basically a series of cards or pictures that shuffle each time you choose a card
