@@ -19,4 +19,14 @@ by raising the nuber of pictures to choose from.
 
 Probably a working loading screen while the cards are loading and move the footer content into the middle with a link to my profile.
 
-Link to game (when it works)
+Link to game: https://soezdemir23.github.io/super-memeory-game/
+
+## What was difficult?
+Apart from trying to understand where to use hooks like useEffect and/or if I even need flushSync, 
+I had the problem understanding where to use the Fisher-Yates algorithm. I used it inside a useEffect, then flushSync.
+Both of them break the app.
+Finally I moved it to the Component where the cards are being rendered as a middle man, which didn't really mess up the state, 
+but mixed up the arrangement of the cards as needed.
+
+THEN the biggest issue for me was trying to deploy it into gh-pages. Very difficult if you deviate from the instructions just a little bit.
+Hence it is so important to have saved up all the progress so far.
