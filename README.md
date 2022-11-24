@@ -27,6 +27,8 @@ by raising the nuber of pictures to choose from.
 ## What's left?
 
 Probably a working loading screen while the cards are loading and move the footer content into the middle with a link to my profile.
+Of course: I need to come back later and refactor the code. Move interfaces to its own file, since they are needlessly cluttering the interface
+All a dev needs to know is what these props mean and they can see it by hovering their mouse over the respective data.
 
 Link to game: https://soezdemir23.github.io/super-memeory-game/
 
