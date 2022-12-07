@@ -112,7 +112,7 @@ function App() {
             <span className="animate-bounce">OV</span>
             <span className="animate-spin">ER</span>
           </h1>
-          <button onClick={newGame} className="mt-24 hover:bg-orange-400">
+          <button onClick={newGame} className="mt-24 hover:bg-orange-400 hover:cursor-pointer">
             New Game?
           </button>
         </div>

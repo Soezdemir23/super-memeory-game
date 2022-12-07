@@ -42,7 +42,7 @@ export default function Main({
         <div
           key={url.id}
           data-key={url.id}
-          className="hover:scale-110 w-32 sm:w-40 xl:w-52"
+          className="hover:scale-110 hover:cursor-pointer w-32 sm:w-40 xl:w-52"
           onClick={onClick}
         >
           <div //className={url.pressed === true ? "animate-spin-horizontal" : ""}
