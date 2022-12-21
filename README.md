@@ -11,9 +11,12 @@ scroll down :)
 
 ## What is a memorygame?
 
-It's basically a series of cards or pictures that shuffle each time you choose a card
-if you manage to click all the cards that you didn't choose before, the difficulty increases
-by raising the nuber of pictures to choose from.
+Basically it works like this:
+1. choose a card
+2. the game shuffles the cards
+3. try not to choose a card you have chosen before
+
+If you win the round, there will be more cards added to increase the difficulty.
 
 ## What was it built with?
 
