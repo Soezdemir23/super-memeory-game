@@ -7,7 +7,7 @@
 + `npm run start`
 
 ## If you want to play it on the browser:
-scroll down :)
+Link to game: https://soezdemir23.github.io/super-memeory-game/
 
 ## What is a memorygame?
 
@@ -33,7 +33,7 @@ Probably a working loading screen while the cards are loading and move the foote
 Of course: I need to come back later and refactor the code. Move interfaces to its own file, since they are needlessly cluttering the interface
 All a dev needs to know is what these props mean and they can see it by hovering their mouse over the respective data.
 
-Link to game: https://soezdemir23.github.io/super-memeory-game/
+
 
 ## What was difficult?
 Apart from trying to understand where to use hooks like useEffect and/or if I even need flushSync, 
