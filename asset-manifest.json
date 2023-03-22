@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/super-memeory-game/static/css/main.ffa23508.css",
-    "main.js": "/super-memeory-game/static/js/main.c44204db.js",
+    "main.css": "/super-memeory-game/static/css/main.5bf49857.css",
+    "main.js": "/super-memeory-game/static/js/main.328b3e7a.js",
     "static/js/787.039ba90d.chunk.js": "/super-memeory-game/static/js/787.039ba90d.chunk.js",
     "index.html": "/super-memeory-game/index.html",
-    "main.ffa23508.css.map": "/super-memeory-game/static/css/main.ffa23508.css.map",
-    "main.c44204db.js.map": "/super-memeory-game/static/js/main.c44204db.js.map",
+    "main.5bf49857.css.map": "/super-memeory-game/static/css/main.5bf49857.css.map",
+    "main.328b3e7a.js.map": "/super-memeory-game/static/js/main.328b3e7a.js.map",
     "787.039ba90d.chunk.js.map": "/super-memeory-game/static/js/787.039ba90d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffa23508.css",
-    "static/js/main.c44204db.js"
+    "static/css/main.5bf49857.css",
+    "static/js/main.328b3e7a.js"
   ]
 }
